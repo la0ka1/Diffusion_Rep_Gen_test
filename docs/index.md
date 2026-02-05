@@ -29,7 +29,7 @@ $$
 \!\left[\big\|\bm{f}_{\bm{\theta}}(\bm{x}+\sigma_t \bm{\epsilon},t)-\bm{x}\big\|^2\right].
 $$
 
-If we learn an approximate $$\bm{f}_{\bm{\theta}}(\bm{y})\approx\bm{f}_{\mathrm{gt}}(\bm{y})=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling will start from noise and iteratively denoise into meaningful images.
+If we learn an rich $$\bm{f}_{\bm{\theta}}(\bm{y})\approx\bm{f}_{\mathrm{gt}}(\bm{y})=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling will start from noise and iteratively denoise into meaningful images, i.e. *generalize*.
 
 However, this striking generalization ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\mathrm{emp}}(\bm{y})$$ that memorizes training samples:
 
