@@ -5,10 +5,13 @@ layout: single
 classes: wide
 ---
 <p class="button-row">
-<a class="btn btn--info" href="https://arxiv.org/abs/2512.20963">arXiv</a>
+<a class="btn btn--arxiv" href="https://arxiv.org/abs/2512.20963">arXiv</a>
 <a class="btn btn--alpha" href="https://alphaxiv.org/abs/2512.20963">alphaXiv</a>
 <a class="btn btn--success" href="{{ site.github.repository_url }}">Code</a>
 <a class="btn btn--warning" href="https://drive.google.com/file/d/12A0cRa1vq_kCqEHYl_2rMLuMIZv64RmV/view?usp=drive_link">Slides</a>
+</p>
+<p class="author-row">
+<a class="author-link" href="https://la0ka1.github.io/">Author Page</a>
 </p>
 
 ---
@@ -28,7 +31,7 @@ $$
 
 If we learn an approximate $$\bm{f}_{\bm{\theta}}(\bm{y})\approx\bm{f}_{\mathrm{gt}}(\bm{y})=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling will start from noise and iteratively denoise into meaningful images.
 
-However, this striking generalization ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\mathrm{\emp}}(\bm{y})$$ that memorizes training samples:
+However, this striking generalization ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\mathrm{emp}}(\bm{y})$$ that memorizes training samples:
 
 $$
 \bm{f}_{\mathrm{emp}}(\bm{y})
