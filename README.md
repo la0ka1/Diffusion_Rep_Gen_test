@@ -17,7 +17,7 @@ Code and figures for the ICLR 2026 paper.
 ## At a glance
 - `1-Theory/` (CPU): ReLU-DAE analysis + diffusion extension.
 - `2-Application/` (GPU recommended): SD v1.4 + LAION representations and steering.
-- `Figs/`: plots are saved automatically when you run the notebooks and displayed in this preview.
+- `Figs/`: plots are saved automatically when you run the notebooks and are displayed in this preview.
 
 ## Quickstart
 ```bash
@@ -63,9 +63,6 @@ Steering trajectory in representation space, showing separation between concepts
 <p align="center">
   <a href="Figs/laion_rep_traj.png"><img src="Figs/laion_rep_traj.png" alt="Steering trajectory" width="45%"></a>
 </p>
-
-
-
 
 ## Citation
 ```bibtex
