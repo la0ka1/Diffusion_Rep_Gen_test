@@ -24,9 +24,9 @@ pip install numpy torch torchvision diffusers transformers accelerate datasets s
 ```
 
 ## GitHub Pages
-1. In your repo settings → Pages → “Deploy from a branch”, choose your default branch and folder `Docs/`.
-2. Update `Docs/_config.yml` with `url: "https://<username>.github.io"` and `baseurl: "/<repo>"` (leave `baseurl` empty only if the repo is named `<username>.github.io`).
-3. Commit and push. GitHub will build the site and publish `Docs/index.md` as the homepage.
+1. In your repo settings → Pages → “Deploy from a branch”, choose your default branch and folder `docs/`.
+2. Update `docs/_config.yml` with `url: "https://<username>.github.io"` and `baseurl: "/<repo>"` (leave `baseurl` empty only if the repo is named `<username>.github.io`).
+3. Commit and push. GitHub will build the site and publish `docs/index.md` as the homepage.
 
 Live site: https://la0ka1.github.io/Diffusion_Gen_Rep_test/
 
