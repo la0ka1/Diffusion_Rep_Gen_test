@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2512.20963"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2512.20963-b31b1b.svg"></a>
   <a href="https://openreview.net/forum?id=57THeGgNAN"><img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-ICLR%202026-0b7fd1.svg"></a>
-  <a href="https://la0ka1.github.io/Diffusion_Rep_Gen_test/"><img alt="Blog" src="https://img.shields.io/badge/Project%20Page-GitHub%20Pages-2ea44f.svg"></a>
+  <a href="https://la0ka1.github.io/Diffusion_Rep_Gen_test/"><img alt="Blog" src="https://img.shields.io/badge/Blog-GitHub%20Pages-2ea44f.svg"></a>
 </p>
 
 Code and figures for the ICLR 2026 paper
@@ -22,13 +22,6 @@ Code and figures for the ICLR 2026 paper
 ```bash
 pip install numpy torch torchvision diffusers transformers accelerate datasets scikit-learn pillow tqdm matplotlib seaborn
 ```
-
-## GitHub Pages
-1. In your repo settings → Pages → “Deploy from a branch”, choose your default branch and folder `docs/`.
-2. Update `docs/_config.yml` with `url: "https://<username>.github.io"` and `baseurl: "/<repo>"` (leave `baseurl` empty only if the repo is named `<username>.github.io`).
-3. Commit and push. GitHub will build the site and publish `docs/index.md` as the homepage.
-
-Live site: https://la0ka1.github.io/Diffusion_Gen_Rep_test/
 
 
 ## 1-Theory (CPU)
