@@ -6,7 +6,7 @@ classes: wide
 ---
 <p class="button-row">
 <a class="btn btn--info" href="https://arxiv.org/abs/2512.20963">arXiv</a>
-<a class="btn btn--info" href="https://alphaxiv.org/abs/2512.20963">alphaXiv</a> [TODO: change the color for alphaXiv]
+<a class="btn btn--alpha" href="https://alphaxiv.org/abs/2512.20963">alphaXiv</a>
 <a class="btn btn--success" href="{{ site.github.repository_url }}">Code</a>
 <a class="btn btn--warning" href="https://drive.google.com/file/d/12A0cRa1vq_kCqEHYl_2rMLuMIZv64RmV/view?usp=drive_link">Slides</a>
 </p>
