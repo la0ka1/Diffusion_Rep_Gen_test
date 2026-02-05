@@ -47,11 +47,11 @@ body,
 }
 
 mjx-container:not([display="true"]) {
-  font-size: 85% !important;
+  font-size: 90% !important;
 }
 
 mjx-container[display="true"] {
-  font-size: 102% !important;
+  font-size: 100% !important;
 }
 
 .button-row {
