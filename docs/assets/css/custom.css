@@ -51,7 +51,7 @@ mjx-container:not([display="true"]) {
 }
 
 mjx-container[display="true"] {
-  font-size: 100% !important;
+  font-size: 93% !important;
 }
 
 .button-row {

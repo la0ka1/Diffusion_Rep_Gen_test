@@ -11,7 +11,7 @@ Code and figures for the ICLR 2026 paper.
 [**Generalization of Diffusion Models Arises with a Balanced Representation Space**](https://www.alphaxiv.org/abs/2512.20963).
 
 <p align="center">
-  <img src="Figs/teaser.png" alt="Teaser" width="70%">
+  <img src="Figs/teaser.png" alt="Teaser" width="80%">
 </p>
 
 ## At a glance
