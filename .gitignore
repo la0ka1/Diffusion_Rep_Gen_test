@@ -1,8 +1,8 @@
 .DS_Store
 
-# Jekyll build output (Docs/)
-Docs/_site
-Docs/.jekyll-cache
-Docs/.sass-cache
-Docs/.jekyll-metadata
-Docs/.bundle
+# Jekyll build output (docs/)
+docs/_site
+docs/.jekyll-cache
+docs/.sass-cache
+docs/.jekyll-metadata
+docs/.bundle
