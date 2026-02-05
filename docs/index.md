@@ -6,13 +6,14 @@ classes: wide
 ---
 <p class="button-row">
 <a class="btn btn--info" href="https://arxiv.org/abs/2512.20963">arXiv</a>
+<a class="btn btn--info" href="https://alphaxiv.org/abs/2512.20963">alphaXiv</a> [TODO: change the color for alphaXiv]
 <a class="btn btn--success" href="{{ site.github.repository_url }}">Code</a>
 <a class="btn btn--warning" href="https://drive.google.com/file/d/12A0cRa1vq_kCqEHYl_2rMLuMIZv64RmV/view?usp=drive_link">Slides</a>
 </p>
 
 ---
-<p class="lead-italic"><em>What are we talking about when we talk about generalization?</em></p>
-Ultimately, generalization is the **implicit alignment** between **neural networks** and the **underlying distribution** $$p_{\mathrm{gt}}$$ (i.e., human-defined data and perception).
+<p class="lead-italic"><em>What we talk about when we talk about generalization?</em></p>
+Ultimately, it is the **implicit alignment** between **neural networks** and the **underlying distribution** $$p_{\mathrm{gt}}$$ (i.e., human-defined data and perception).
 
 <img src="{{ '/assets/figures/network_learns.png' | relative_url }}" width="60%" style="display:block;margin:auto;" />
 <p style="text-align:center;"><strong>Generalization as alignment.</strong> The network learns beyond the finite training set to approximate ground truth.</p>
@@ -25,10 +26,16 @@ $$
 \!\left[\big\|\bm{f}_{\bm{\theta}}(\bm{x}+\sigma_t \bm{\epsilon},t)-\bm{x}\big\|^2\right].
 $$
 
-If we learn an approximate $$\bm{f}_{\mathrm{emp}}$$, sampling will starts from noise and iteratively denoises to meaningful images.
+If we learn an approximate $$\bm{f}_{\bm{\theta}}(\bm{y})\approx\bm{f}_{\mathrm{gt}}(\bm{y})=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling will starts from noise and iteratively denoises to meaningful images.
 
-This striking ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely collapse to an empirical solution that memorizes training samples:
+However, this striking generalization ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\bm{\emp}}(\bm{y})$$ that memorizes training samples:
 
+$$
+\bm{f}_{\mathrm{emp}}(\bm{y})
+= \mathbb{E}\!\left[\bm{x}\mid \bm{x}+\sigma_t\bm{\epsilon}=\bm{y};\,\bm{x}\sim p_{\mathrm{emp}}\right]
+= \frac{\sum_{i=1}^n \mathcal{N}(\bm{y};\bm{x}_i,\sigma_t^2\bm{I})\,\bm{x}_i}
+{\sum_{i=1}^n \mathcal{N}(\bm{y};\bm{x}_i,\sigma_t^2\bm{I})}.
+$$
 
 ---
 <p class="lead-italic"><em>Understanding this requires looking into networks.</em></p>
@@ -49,7 +56,7 @@ We prove a clean correspondence:
 <p style="text-align:center;"><strong>Three regimes in ReLU-DAE learning.</strong> Memorization (left), hybrid (center), and generalization (right)</p>
 
 ---
-<p class="lead-italic"><em>Representation learning follows naturally.</em></p>
+<p class="lead-italic"><em>Representation learning follows naturally:</em></p>
 Memorized samples align perfectly with stored structures and produce *spiky* representations: think of a strong single-neuron response or retrieval of a specific training example.  
 Generalized samples align with a broader set of structures, yielding *balanced* representations that compose across neurons and reflect the underlying distribution, serving as a coordinate for the image manifold.
 
@@ -84,7 +91,7 @@ Generalized representations can also be manipulated to change the final generati
 <p style="text-align:center;"><strong>Image editing via representation steering.</strong> Works for generalized samples but not for memorized samples.</p>
 
 ---
-<p class="lead-italic"><em>Our theory starts from a simple two-layer network.</em></p>
-We believe it reflects a fundamental mechanism in deep models: they project noisy inputs onto learned low-dimensional structure, *arranging visually similar inputs into similar activations* (via ReLU gating in our theory). 
+<p class="lead-italic"><em>Our theory starts from a simple two-layer network, but</em></p>
+we believe it reflects a fundamental mechanism in deep models: they project noisy inputs onto learned low-dimensional structure, *arranging visually similar inputs into similar activations* (via ReLU gating in our theory). 
 
 This arrangement underlies their **compressing and denoising nature**, and aligns strongly with human perception. Internally, it is reflected as representation learning; empirically, learning a balanced and semantic representation space is a strong indicator of generalization.
