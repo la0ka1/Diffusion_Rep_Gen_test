@@ -11,7 +11,7 @@ classes: wide
 <a class="btn btn--warning" href="https://drive.google.com/file/d/12A0cRa1vq_kCqEHYl_2rMLuMIZv64RmV/view?usp=drive_link">Slides</a>
 </p>
 <p class="author-row">
-<a class="author-link" href="https://la0ka1.github.io/">Author Page</a>
+<a class="author-link" href="https://la0ka1.github.io/">By Zekai Zhang</a>
 </p>
 
 ---
