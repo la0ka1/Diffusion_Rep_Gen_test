@@ -25,7 +25,7 @@ $$
 \!\left[\big\|\bm{f}_{\bm{\theta}}(\bm{x}+\sigma_t \bm{\epsilon},t)-\bm{x}\big\|^2\right].
 $$
 
-Sampling therefore starts from noise and iteratively denoises to meaningful images.
+If we learn an approximate $$\bm{f}_{\mathrm{emp}}$$, sampling will starts from noise and iteratively denoises to meaningful images.
 
 This striking ability is *not* simply because neural networks can approximate arbitrary functions. Otherwise, training would routinely collapse to an empirical solution that memorizes training samples:
 
