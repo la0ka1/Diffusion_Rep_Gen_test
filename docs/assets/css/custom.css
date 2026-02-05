@@ -91,28 +91,23 @@ mjx-container[display="true"] {
 }
 
 .author-row {
-  display: flex;
-  justify-content: center;
   margin: 0 0 1.25rem;
 }
 
 .author-link {
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
   text-decoration: none;
   color: #0f172a;
-  padding: 0.3rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.2);
-  background: linear-gradient(120deg, rgba(15, 23, 42, 0.06), rgba(15, 23, 42, 0.02));
-  transition: color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.3);
+  transition: color 0.18s ease, border-color 0.18s ease;
 }
 
 .author-link:hover {
   color: #0b7fd1;
   border-color: rgba(11, 127, 209, 0.6);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
 }
 
 .button-row .btn:hover {
