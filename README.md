@@ -17,7 +17,7 @@ Code and figures for the ICLR 2026 paper.
 ## At a glance
 - `1-Theory/` (CPU): ReLU-DAE analysis + diffusion extension.
 - `2-Application/` (GPU recommended): SD v1.4 + LAION representations and steering.
-- `Figs/`: plots are saved automatically when you run the notebooks and are displayed in this preview.
+- `Figs/`: plots are saved automatically when you run the notebooks and are shown in this preview.
 
 ## Quickstart
 ```bash
@@ -35,7 +35,7 @@ ReLU-DAE on CelebA: representations and weights for memorization vs. generalizat
   <a href="Figs/celeba_weights.png"><img src="Figs/celeba_weights.png" alt="Figure 4: CelebA DAE weights" width="48%"></a>
 </p>
 
-A time-conditioned diffusion extension under the same toy setup.
+A time-conditioned diffusion extension in the same toy setup.
 <p align="center">
   <a href="Figs/celeba_sampling_mem.png"><img src="Figs/celeba_sampling_mem.png" alt="CelebA Mem sampling" width="48%"></a>
   <a href="Figs/celeba_sampling_gen.png"><img src="Figs/celeba_sampling_gen.png" alt="CelebA Gen sampling" width="48%"></a>
@@ -59,7 +59,7 @@ Representation steering: generalization vs. memorization (Figure 8).
 </p>
 
 ## Additional figure
-Steering trajectory in representation space, showing separation between concepts/styles and how steering transfers.
+Steering trajectory in representation space, showing *separation between concepts/styles* and how steering transfers across them.
 <p align="center">
   <a href="Figs/laion_rep_traj.png"><img src="Figs/laion_rep_traj.png" alt="Steering trajectory" width="45%"></a>
 </p>

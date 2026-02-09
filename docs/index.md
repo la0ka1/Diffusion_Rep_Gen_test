@@ -16,7 +16,7 @@ classes: wide
 
 ---
 <p class="lead-italic"><em>What we talk about when we talk about generalization?</em></p>
-Ultimately, it is the **implicit alignment** between **neural networks** and the **underlying distribution** $$p_{\mathrm{gt}}$$ (i.e., human-defined data and perception).
+Ultimately, generalization is the **implicit alignment** between **neural networks** and the **underlying distribution** $$p_{\mathrm{gt}}$$ (i.e., human-defined data and perception).
 
 <img src="{{ '/assets/figures/network_learns.png' | relative_url }}" width="55%" style="display:block;margin:auto;" />
 <p style="text-align:center;"><strong>Generalization as alignment.</strong> The network learns beyond the finite training set to approximate ground truth.</p>
@@ -29,12 +29,12 @@ $$
 \!\left[\big\|\bm{f}_{\bm{\theta}}(\bm{x}+\sigma_t \bm{\epsilon},t)-\bm{x}\big\|^2\right].
 $$
 
-If we learn a rich $$\bm{f}_{\bm{\theta}}(\bm{y})\approx\bm{f}_{\mathrm{gt}}(\bm{y})=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling starts from noise and iteratively denoises into meaningful images, i.e., it *generalizes*.
+If we learn a rich $$\bm{f}_{\bm{\theta}}(\bm{y}, t)\approx\bm{f}_{\mathrm{gt}}(\bm{y}, t)=\mathbb{E}\!\left[\bm{x} \mid \bm{x} + \sigma_t \bm{\epsilon} = \bm{y};\, \bm{x} \sim p_{\mathrm{gt}}\right]$$ with this loss, sampling starts from noise and iteratively denoises into meaningful images, i.e., it *generalizes*.
 
-However, this striking generalization ability is *not* simply due to neural networks' ability to approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\mathrm{emp}}(\bm{y})$$ that *memorizes* training samples:
+However, this striking generalization ability is *not* simply due to neural networks' ability to approximate arbitrary functions. Otherwise, training would routinely overfit to an empirical solution $$\bm{f}_{\mathrm{emp}}(\bm{y}, t)$$ that *memorizes* training samples:
 
 $$
-\bm{f}_{\mathrm{emp}}(\bm{y})
+\bm{f}_{\mathrm{emp}}(\bm{y}, t)
 = \mathbb{E}\!\left[\bm{x}\mid \bm{x}+\sigma_t\bm{\epsilon}=\bm{y};\,\bm{x}\sim p_{\mathrm{emp}}\right]
 = \frac{\sum_{i=1}^n \mathcal{N}(\bm{y};\bm{x}_i,\sigma_t^2\bm{I})\,\bm{x}_i}
 {\sum_{i=1}^n \mathcal{N}(\bm{y};\bm{x}_i,\sigma_t^2\bm{I})}.
@@ -51,8 +51,8 @@ $$
 $$
 
 We prove a clean correspondence:  
-(i) *memorization* $$\Leftrightarrow$$ storing raw samples in the weights, approximating $$\bm{f}_{\mathrm{emp}}$$;  
-(ii) *generalization* $$\Leftrightarrow$$ learning local data statistics, approximating $$\bm{f}_{\mathrm{gt}}$$; and  
+(i) *memorization* $$\Leftrightarrow$$ $$\bm{W}_1, \bm{W}_2$$ storing raw samples in the weights, approximating $$\bm{f}_{\mathrm{emp}}$$;  
+(ii) *generalization* $$\Leftrightarrow$$ $$\bm{W}_1, \bm{W}_2$$ learning local data statistics, approximating $$\bm{f}_{\mathrm{gt}}$$; and  
 (iii) a *hybrid regime* due to data imbalance.
 
 <img src="{{ '/assets/figures/teaser.png' | relative_url }}" width="80%" style="display:block;margin:auto;" />
@@ -75,7 +75,7 @@ Generalized samples align with a broader set of structures, yielding *balanced* 
   </div>
 </div>
 
-<p style="text-align:center;"><strong>Same signature in real diffusion models.</strong> The spiky-vs-balanced separation persists in large models.</p>
+<p style="text-align:center;"><strong>The same signature appears in real diffusion models.</strong> The spiky-vs-balanced separation persists in large models.</p>
 
 ---
 
@@ -97,4 +97,4 @@ Generalized representations can also be manipulated to change the final output.
 <p class="lead-italic"><em>Our theory starts from a simple two-layer network, but</em></p>
 we believe it reflects a fundamental mechanism in deep models: they project noisy inputs onto learned low-dimensional structure, *arranging visually similar inputs into similar activations* (via ReLU gating in our theory).
 
-This arrangement underlies their **compressing and denoising nature**, and aligns strongly with human perception. Internally, this is reflected in representation learning. Therefore, learning balanced and semantic representations is a strong indicator of generalization.
+This smart arrangement underlies their **compression and denoising nature** and aligns strongly with human perception. Internally, this is reflected as *representation learning*. Therefore, learning balanced and semantic representations is a strong indicator of generalization.
